@@ -1,0 +1,17 @@
+fastapi==0.110.1
+uvicorn[standard]==0.29.0
+gunicorn==21.2.0
+python-dotenv==1.0.1
+Flask-Cors==4.0.0
+
+# LangChain and vector DB
+langchain==0.3.24
+langchain-openai==0.3.14
+chromadb==0.5.11
+
+# File parsing support
+PyPDF2==3.0.1
+python-docx==1.1.0
+
+# OpenAI client
+openai==1.76.2

@@ -1,0 +1,169 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f9fafb;
+  color: #374151;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Chat Container */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  width: 180vh;
+  padding: 0 1rem; /* Add horizontal padding */
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Message List */
+.message-list {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Message Bubbles */
+.message {
+  display: flex;
+}
+
+.message.user {
+  justify-content: flex-end;
+}
+
+.message.bot {
+  justify-content: flex-start;
+}
+
+.message-bubble {
+  max-width: 70%;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  word-wrap: break-word;
+}
+
+.message.user .message-bubble {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.message.bot .message-bubble {
+  background-color: #e5e7eb;
+  color: #374151;
+  border-bottom-left-radius: 0.25rem;
+}
+
+/* Input Area */
+.input-area {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-top: 1px solid #e5e7eb;
+}
+
+.input-area input {
+  flex: 1;
+  max-width: 600px;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  outline: none;
+  font-size: 1rem;
+}
+
+.input-area input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.input-area button {
+  margin-left: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.input-area button:hover {
+  background-color: #2563eb;
+}
+
+/* Scrollbar Styling */
+.message-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.message-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.message-list::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.message-list::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+  display: inline-block;
+  margin-left: 4px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  50.1%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Chat Title */
+.chat-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem;
+  background-color: #e1c86b;
+  color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.loader-icon {
+  margin-right: 8px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.emoji-loader {
+  margin-right: 8px;
+  font-style: italic;
+  opacity: 0.75;
+}
