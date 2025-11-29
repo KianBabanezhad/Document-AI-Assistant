@@ -33,7 +33,7 @@ The application consists of three main components:
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/KianBabanezhad/Document-AI-Assistant
 ```
 
 ### 2. Install Python Dependencies
